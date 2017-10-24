@@ -15,11 +15,23 @@ nav .brand-logo {
     color: black;
 }
 
+nav .brand-logo {
+    height: 100%;
+}
+
+nav .brand-logo .icon {
+    width: auto;
+    height: 80%;
+    vertical-align: middle;
+}
+
 nav ul a {
     color: black;
 }
 
-nav ul a:hover {
+nav ul a:hover,
+nav ul li.active,
+.side-nav li.active {
     background: transparent;
 }
 
@@ -45,6 +57,16 @@ nav ul li::before {
     transform-origin: left top;
 }
 
+ul.side-nav li::before {
+    left: 3px;
+    top: 3px;
+}
+
+ul.side-nav li::after {
+    right: 3px;
+    bottom: 3px;
+}
+
 nav ul li::after {
     border-width: 0px 2px 2px 0px;
     right: 2px;
@@ -53,10 +75,32 @@ nav ul li::after {
 }
 
 nav ul li:hover::before,
-nav ul li:hover::after {
+nav ul li:hover::after,
+nav ul li.active::before,
+nav ul li.active::after {
     transform: scale(1);
 }
 
 #sidenav-overlay {
     background-color: rgba(0, 0, 0, 0);
+}
+
+#section-two .card-panel {
+    text-align: center;
+}
+
+#section-two .card-panel p {
+    text-align: justify;
+}
+
+#section-three {
+    background-image: url(../images/image1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 1em 0em;
+}
+
+#section-three .card-panel {
+    background: rgba(0, 0, 0, 0.5);
 }
