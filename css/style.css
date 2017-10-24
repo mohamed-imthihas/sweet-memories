@@ -1,0 +1,62 @@
+header {
+    background-image: url('../images/headerbg.jpg');
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+nav {
+    padding: 0px 1em;
+}
+
+nav .brand-logo {
+    color: black;
+}
+
+nav ul a {
+    color: black;
+}
+
+nav ul a:hover {
+    background: transparent;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li::before,
+nav ul li::after {
+    content: '';
+    border: 2px solid gray;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    transform: scale(0);
+    transition: 0.4s all ease-out;
+}
+
+nav ul li::before {
+    border-width: 2px 0px 0px 2px;
+    left: 2px;
+    top: 13px;
+    transform-origin: left top;
+}
+
+nav ul li::after {
+    border-width: 0px 2px 2px 0px;
+    right: 2px;
+    bottom: 13px;
+    transform-origin: right bottom;
+}
+
+nav ul li:hover::before,
+nav ul li:hover::after {
+    transform: scale(1);
+}
+
+#sidenav-overlay {
+    background-color: rgba(0, 0, 0, 0);
+}
