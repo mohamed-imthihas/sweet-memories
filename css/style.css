@@ -81,8 +81,48 @@ nav ul li.active::after {
     transform: scale(1);
 }
 
+
+/* header slider style */
+
+.slider .slides li img {
+    opacity: 0.5;
+}
+
 #sidenav-overlay {
     background-color: rgba(0, 0, 0, 0);
+}
+
+.slider .slides li .caption {
+    top: 45%;
+}
+
+
+/* common style */
+
+.section h2 {
+    position: relative;
+}
+
+.section h2::after {
+    position: absolute;
+    content: '';
+    border: 2px solid green;
+    display: inline-block;
+    bottom: -5px;
+    left: 50%;
+    width: 60px;
+    transform: translateX(-50%);
+}
+
+
+/* promo section */
+
+#section-promo p {
+    font-size: 1.5em;
+    line-height: 1.5em;
+    font-weight: 600;
+    font-style: italic;
+    text-align: center;
 }
 
 #section-two .card-panel {
@@ -104,6 +144,77 @@ nav ul li.active::after {
 #section-three .card-panel {
     background: rgba(0, 0, 0, 0.5);
 }
+
+.photo-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* //grid-template-rows: repeat(10, 1fr); */
+    grid-gap: 0.5em;
+    grid-auto-flow: dense;
+}
+
+@media only screen and (min-width: 993px) {
+    .photo-list {
+        grid-template-columns: repeat(7, 1fr);
+    }
+}
+
+.width-1 {
+    grid-column: auto /span 1;
+}
+
+.width-2 {
+    grid-column: auto /span 2;
+}
+
+.height-1 {
+    grid-row: auto / span 1;
+}
+
+.height-2 {
+    grid-row: auto / span 2;
+}
+
+.photo-list li {
+    background-size: cover;
+    background-position: center;
+}
+
+.photo-list li img {
+    width: 0%;
+    height: 0%;
+}
+
+
+/* video section */
+
+.video-holder {
+    position: relative;
+    max-height: 480px;
+    overflow: hidden;
+}
+
+.video-holder .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.video-holder .background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    opacity: 0.5;
+    z-index: -2;
+}
+
+
+/* customer review section */
 
 .customer-review blockquote p {
     text-indent: 30px;
@@ -141,7 +252,14 @@ nav ul li.active::after {
     background-color: #263238;
 }
 
+
+/* footer style */
+
 footer .social-links a {
     padding: 0.2em;
     color: white;
+}
+
+footer.page-footer {
+    padding-top: 1px;
 }
