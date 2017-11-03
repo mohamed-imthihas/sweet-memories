@@ -23,6 +23,8 @@ function playVideo() {
     $('.video-holder .promo-video').get(1).play();
     $('.video-holder .play-button').hide();
 }
+
+
 $(document).ready(function() {
     initialize();
     fillPhotosInPhotoSection();

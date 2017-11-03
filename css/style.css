@@ -1,265 +1,370 @@
-header {
-    background-image: url('../images/headerbg.jpg');
-    height: 100vh;
-    width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover
-}
-
-nav {
-    padding: 0px 1em;
-}
-
-nav .brand-logo {
-    color: black;
-}
-
-nav .brand-logo {
-    height: 100%;
-}
-
-nav .brand-logo .icon {
-    width: auto;
-    height: 80%;
-    vertical-align: middle;
-}
-
-nav ul a {
-    color: black;
-}
-
-nav ul a:hover,
-nav ul li.active,
-.side-nav li.active {
-    background: transparent;
-}
-
-nav ul li {
-    position: relative;
-}
-
-nav ul li::before,
-nav ul li::after {
-    content: '';
-    border: 2px solid gray;
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    transform: scale(0);
-    transition: 0.4s all ease-out;
-}
-
-nav ul li::before {
-    border-width: 2px 0px 0px 2px;
-    left: 2px;
-    top: 13px;
-    transform-origin: left top;
-}
-
-ul.side-nav li::before {
-    left: 3px;
-    top: 3px;
-}
-
-ul.side-nav li::after {
-    right: 3px;
-    bottom: 3px;
-}
-
-nav ul li::after {
-    border-width: 0px 2px 2px 0px;
-    right: 2px;
-    bottom: 13px;
-    transform-origin: right bottom;
-}
-
-nav ul li:hover::before,
-nav ul li:hover::after,
-nav ul li.active::before,
-nav ul li.active::after {
-    transform: scale(1);
-}
-
-
-/* header slider style */
-
-.slider .slides li img {
-    opacity: 0.5;
-}
-
-#sidenav-overlay {
-    background-color: rgba(0, 0, 0, 0);
-}
-
-.slider .slides li .caption {
-    top: 45%;
-}
-
-
-/* common style */
-
-.section h2 {
-    position: relative;
-}
-
-.section h2::after {
-    position: absolute;
-    content: '';
-    border: 2px solid green;
-    display: inline-block;
-    bottom: -5px;
-    left: 50%;
-    width: 60px;
-    transform: translateX(-50%);
-}
-
-
-/* promo section */
-
-#section-promo p {
-    font-size: 1.5em;
-    line-height: 1.5em;
-    font-weight: 600;
-    font-style: italic;
-    text-align: center;
-}
-
-#section-two .card-panel {
-    text-align: center;
-}
-
-#section-two .card-panel p {
-    text-align: justify;
-}
-
-#section-three {
-    background-image: url(../images/image1.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 1em 0em;
-}
-
-#section-three .card-panel {
-    background: rgba(0, 0, 0, 0.5);
-}
-
-.photo-list {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    /* //grid-template-rows: repeat(10, 1fr); */
-    grid-gap: 0.5em;
-    grid-auto-flow: dense;
-}
-
-@media only screen and (min-width: 993px) {
-    .photo-list {
-        grid-template-columns: repeat(7, 1fr);
-    }
-}
-
-.width-1 {
-    grid-column: auto /span 1;
-}
-
-.width-2 {
-    grid-column: auto /span 2;
-}
-
-.height-1 {
-    grid-row: auto / span 1;
-}
-
-.height-2 {
-    grid-row: auto / span 2;
-}
-
-.photo-list li {
-    background-size: cover;
-    background-position: center;
-}
-
-.photo-list li img {
-    width: 0%;
-    height: 0%;
-}
-
-
-/* video section */
-
-.video-holder {
-    position: relative;
-    max-height: 480px;
-    overflow: hidden;
-}
-
-.video-holder .play-button {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-}
-
-.video-holder .background-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    opacity: 0.5;
-    z-index: -2;
-}
-
-
-/* customer review section */
-
-.customer-review blockquote p {
-    text-indent: 30px;
-    font-style: italic;
-}
-
-.customer-review blockquote::before {
-    content: "\f10d";
-    font: normal normal normal 14px/1 FontAwesome;
-    position: absolute;
-    font-size: 1.5em;
-}
-
-.customer-review blockquote footer {
-    margin-left: 15px;
-    text-transform: capitalize;
-}
-
-.customer-review blockquote footer:before {
-    content: '---';
-    padding: 5px;
-    font-weight: 600;
-}
-
-.carousel.carousel-slider .carousel-item {
-    height: 50%;
-    min-height: 200px;
-}
-
-.carousel.carousel-slider ul.indicators li.indicator-item {
-    background-color: #b0bec5;
-}
-
-.carousel.carousel-slider ul.indicators li.indicator-item.active {
-    background-color: #263238;
-}
-
-
-/* footer style */
-
-footer .social-links a {
-    padding: 0.2em;
-    color: white;
-}
-
-footer.page-footer {
-    padding-top: 1px;
-}
+        header.home-page {
+            height: 100vh;
+            width: 100%;
+        }
+        
+        nav {
+            padding: 0px 1em;
+        }
+        
+        nav .brand-logo {
+            color: black;
+        }
+        
+        nav .brand-logo {
+            height: 100%;
+        }
+        
+        nav .brand-logo .icon {
+            width: auto;
+            height: 80%;
+            vertical-align: middle;
+        }
+        
+        nav ul a {
+            color: black;
+        }
+        
+        nav ul a:hover,
+        nav ul li.active,
+        .side-nav li a:hover,
+        .side-nav li.active {
+            background: transparent;
+        }
+        
+        nav ul li,
+        .side-nav li {
+            position: relative;
+        }
+        
+        nav ul li::before,
+        nav ul li::after,
+        .side-nav li::before,
+        .side-nav li::after {
+            content: '';
+            border: 3px solid gray;
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            transform: scale(0);
+            transition: 0.4s all ease-out;
+        }
+        
+        nav ul li::before,
+        .side-nav li::before {
+            border-width: 3px 0px 0px 3px;
+            left: 2px;
+            top: 13px;
+            transform-origin: left top;
+        }
+        
+        ul.side-nav li::before {
+            left: 3px;
+            top: 3px;
+        }
+        
+        ul.side-nav li::after {
+            right: 3px;
+            bottom: 3px;
+        }
+        
+        nav ul li::after,
+        .side-nav li::after {
+            border-width: 0px 3px 3px 0px;
+            right: 2px;
+            bottom: 13px;
+            transform-origin: right bottom;
+        }
+        
+        nav ul li:hover::before,
+        nav ul li:hover::after,
+        nav ul li.active::before,
+        nav ul li.active::after,
+        .side-nav li:hover::before,
+        .side-nav li:hover::after,
+        .side-nav li.active::before,
+        .side-nav li.active::after {
+            transform: scale(1);
+        }
+        /* header slider style */
+        
+        .slider .slides li img {
+            opacity: 0.5;
+        }
+        
+        #sidenav-overlay {
+            background-color: rgba(0, 0, 0, 0);
+        }
+        
+        .slider .slides li .caption {
+            top: 45%;
+        }
+        /* common style */
+        
+        .section h2 {
+            position: relative;
+        }
+        
+        .section h2::after {
+            position: absolute;
+            content: '';
+            border: 2px solid green;
+            display: inline-block;
+            bottom: -5px;
+            left: 50%;
+            width: 60px;
+            transform: translateX(-50%);
+        }
+        
+        .justify-text {
+            text-align: justify;
+        }
+        /* promo section */
+        
+        #section-promo p {
+            font-size: 1.5em;
+            line-height: 1.5em;
+            font-weight: 600;
+            font-style: italic;
+            text-align: center;
+        }
+        
+        #section-two .card-panel {
+            text-align: center;
+        }
+        
+        #section-two .card-panel p {
+            text-align: justify;
+        }
+        
+        #section-three {
+            background-image: url(../images/image1.jpeg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 1em 0em;
+        }
+        
+        #section-three .card-panel {
+            background: rgba(0, 0, 0, 0.5);
+        }
+        
+        .photo-list {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 0.2em;
+            grid-auto-flow: dense;
+        }
+        
+        @media only screen and (min-width: 993px) {
+            .photo-list {
+                grid-template-columns: repeat(7, 1fr);
+            }
+        }
+        
+        .width-1 {
+            grid-column: auto /span 1;
+        }
+        
+        .width-2 {
+            grid-column: auto /span 2;
+        }
+        
+        .height-1 {
+            grid-row: auto / span 1;
+        }
+        
+        .height-2 {
+            grid-row: auto / span 2;
+        }
+        
+        .photo-list li {
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .photo-list li img {
+            width: 0%;
+            height: 0%;
+        }
+        /* video section */
+        
+        .video-holder {
+            position: relative;
+            max-height: 480px;
+            overflow: hidden;
+        }
+        
+        .video-holder .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+        }
+        
+        .video-holder .background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            opacity: 0.5;
+            z-index: -2;
+        }
+        /* customer review section */
+        
+        .customer-review blockquote p {
+            text-indent: 30px;
+            font-style: italic;
+        }
+        
+        .customer-review blockquote::before {
+            content: "\f10d";
+            font: normal normal normal 14px/1 FontAwesome;
+            position: absolute;
+            font-size: 1.5em;
+        }
+        
+        .customer-review blockquote footer {
+            margin-left: 15px;
+            text-transform: capitalize;
+        }
+        
+        .customer-review blockquote footer:before {
+            content: '---';
+            padding: 5px;
+            font-weight: 600;
+        }
+        
+        .carousel.carousel-slider .carousel-item {
+            height: 50%;
+            min-height: 200px;
+        }
+        
+        .carousel.carousel-slider ul.indicators li.indicator-item {
+            background-color: #b0bec5;
+        }
+        
+        .carousel.carousel-slider ul.indicators li.indicator-item.active {
+            background-color: #263238;
+        }
+        /* footer style */
+        
+        footer .social-links a {
+            padding: 0.2em;
+            color: white;
+        }
+        
+        footer.page-footer {
+            padding-top: 1px;
+        }
+        
+        .map-section div {
+            height: 400px;
+            width: 100%;
+        }
+        
+        .contact-section .side-card {
+            margin-top: -100px;
+        }
+        
+        .contact-section .side-card .title {
+            font-weight: 600;
+        }
+        
+        .contact-section .side-card address {
+            line-height: 2em;
+        }
+        
+        .contact-section .side-card .email,
+        .contact-section .side-card .phone {
+            margin: 10px 0px;
+        }
+        
+        .contact-section #contact-form input[type='submit'] {
+            width: 100%;
+        }
+        
+        .contact-section .form-section h2 {
+            font-weight: 400;
+        }
+        /* about us style */
+        
+        .about-me {
+            text-align: center;
+        }
+        
+        @media only screen and (min-width: 993px) {
+            .about-me {
+                display: flex;
+                align-items: center;
+                text-align: left;
+            }
+        }
+        
+        .about-me img.large-img {
+            width: 75%;
+            margin-left: 1em;
+        }
+        
+        .about-me .leader-img img {
+            width: 90%;
+            height: auto;
+        }
+        
+        @media only screen and (min-width: 601px) {
+            .about-me .leader-img img {
+                width: 50%;
+                height: auto;
+            }
+        }
+        
+        .team-card img {
+            width: 30%;
+        }
+        
+        @media only screen and (min-width: 601px) {
+            .team-card img {
+                width: 50%;
+            }
+        }
+        
+        .service {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .service .service-img-holder {
+            flex: 1;
+        }
+        
+        .service img {
+            width: 75%;
+        }
+        
+        @media only screen and (min-width: 601px) {
+            .service {
+                flex-direction: row-reverse;
+            }
+            /* .service .service-text {
+                margin-bottom: 60px;
+            }
+            .service .service-img-holder {
+                margin-bottom: -150px;
+            } */
+            .service.reverse {
+                flex-direction: row;
+            }
+            /* .service.reverse .service-text {
+                margin-top: 110px;
+            }
+            .service.reverse .service-img-holder {
+                margin-top: -100px;
+            } */
+            .service img {
+                width: 100%;
+            }
+        }
