@@ -1,6 +1,7 @@
         header.home-page {
             height: 100vh;
             width: 100%;
+            margin-bottom: 0px;
         }
         
         nav {
@@ -23,6 +24,8 @@
         
         nav ul a {
             color: black;
+            text-transform: uppercase;
+            font-weight: 400;
         }
         
         nav ul a:hover,
@@ -86,10 +89,73 @@
         .side-nav li.active::after {
             transform: scale(1);
         }
+        
+        .navbar-transparent nav {
+            position: absolute;
+            background-color: transparent !important;
+            box-shadow: none;
+        }
+        
+        .navbar-transparent nav ul li::before,
+        .navbar-transparent nav ul li::after {
+            border-color: #fff;
+        }
+        
+        .navbar-transparent nav ul a {
+            color: #fff;
+        }
+        
+        .navbar-transparent nav .brand-logo {
+            color: #fff;
+        }
+        
+        .navbar-transparent nav .button-collapse {
+            color: #fff !important;
+        }
+        
+        header {
+            height: 50vh;
+        }
+        
+        header .banner {
+            position: absolute;
+            width: 100%;
+            top: 0;
+            height: 50vh;
+            background: url(../images/image1.jpeg) rgba(0, 0, 0, 0.5);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        header .banner h1 {
+            padding: 0.2em 0.5em;
+            background: rgba(12, 12, 12, 0.5);
+            color: #fff;
+            left: 50%;
+            top: 50%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+        }
         /* header slider style */
         
         .slider .slides li img {
-            opacity: 0.5;
+            /* opacity: 0.5; */
+        }
+        
+        .slider .slides li:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 3;
+        }
+        
+        .slider .slides li .caption {
+            z-index: 4;
         }
         
         #sidenav-overlay {
@@ -148,8 +214,7 @@
         #section-three .card-panel {
             background: rgba(0, 0, 0, 0.5);
         }
-        
-        .photo-list {
+        /* .photo-list {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             grid-gap: 0.2em;
@@ -177,10 +242,13 @@
         .height-2 {
             grid-row: auto / span 2;
         }
+         */
         
         .photo-list li {
             background-size: cover;
             background-position: center;
+            background-clip: content-box;
+            padding: 0.2em;
         }
         
         .photo-list li img {

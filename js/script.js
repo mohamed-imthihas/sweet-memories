@@ -1,16 +1,3 @@
-function fillPhotosInPhotoSection() {
-    var grids = $('.photo-list li');
-    for (var i = 0; i < grids.length; i++) {
-        var cell = $(grids[i]);
-        cell.css('background-image', 'url(' + cell.find('img').attr('src') + ')');
-    }
-}
-
-function resizePhotoGridCell() {
-    var cellWidth = $('.photo-list li.width-1').width();
-    $('.photo-list').css('grid-auto-rows', cellWidth + 'px');
-}
-
 function initialize() {
     $("html").easeScroll();
     $(".button-collapse").sideNav();
@@ -27,10 +14,9 @@ function playVideo() {
 
 $(document).ready(function() {
     initialize();
-    fillPhotosInPhotoSection();
-    resizePhotoGridCell();
-    $(window).resize(function() {
-        resizePhotoGridCell();
+    $(window).scroll(function() {
+        $('.navbar-fixed').toggleClass('navbar-transparent', $(this).scrollTop() < 100);
     })
+    window.scrollBy(0, 1);
     $('.video-holder .play-button').click(playVideo);
 });
